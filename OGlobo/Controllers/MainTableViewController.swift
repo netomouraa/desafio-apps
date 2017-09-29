@@ -17,8 +17,8 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var arrayNoticias = [Conteudos]()
     var imagemNoticia: UIImage?
-//    var urlImagem = [String]()
-    
+    var cache = NSCache<AnyObject, AnyObject>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,9 +51,8 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
                             }
                         }
                     }
-                    DispatchQueue.main.async() {
-                        self.mainTableView.reloadData()
-                    }
+                self.mainTableView.reloadData()
+                    
                 self.activityIndicator.stopAnimating()
                 UIApplication.shared.endIgnoringInteractionEvents()
                 
@@ -62,15 +61,6 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.activityIndicator.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
                 }
-        }
-    }
-    
-    func requestImagem( url: String) {
-        Alamofire.request(url).responseImage { response in
-            if let image = response.result.value {
-                
-                self.imagemNoticia = image
-            }
         }
     }
     
@@ -102,59 +92,62 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var noticias = self.arrayNoticias[indexPath.row]
-
         if indexPath.section == 0 {
-            noticias = self.arrayNoticias.first!
-            for item in noticias.imagens! {
-                self.requestImagem(url: item.url!)
-            }
-            
+            let noticias = self.arrayNoticias[indexPath.row]
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "mainCell1", for: indexPath) as! MainTableViewCell1
-            cell1.imageViewNoticia1.image = self.imagemNoticia
+            for item in noticias.imagens! {
+                if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
+                    cell1.imageViewNoticia1.image = image as? UIImage
+                }else {
+                    self.imagemNoticia = nil
+                    Alamofire.request(item.url!).responseImage { response in
+                        if let image = response.result.value {
+                            cell1.imageViewNoticia1.image = image
+                            self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
+                        }else{
+                            print(response.description)
+                        }
+                    }
+                }
+            }
             cell1.labelNomeSecao1.text = noticias.secao?.nome?.uppercased()
             cell1.labelTituloNoticia1.text = noticias.titulo
             return cell1
+            
         } else {
-            for item in noticias.imagens! {
-                self.requestImagem(url: item.url!)
-            }
-
+            let noticias = self.arrayNoticias[indexPath.row + 1]
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "mainCell2", for: indexPath) as! MainTableViewCell2
-            cell2.imageViewNoticia2.image = self.imagemNoticia
+            for item in noticias.imagens! {
+                if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
+                    cell2.imageViewNoticia2.image = image as? UIImage
+                }else {
+                    cell2.imageViewNoticia2.image = nil
+                    Alamofire.request(item.url!).responseImage { response in
+                        if let image = response.result.value {
+                            cell2.imageViewNoticia2.image = image
+                            self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
+                        }else{
+                            print(response.description)
+                        }
+                    }
+                }
+            }
             cell2.labelNomeSecao2.text = noticias.secao?.nome?.uppercased()
             cell2.labelTituloNoticia2.text = noticias.titulo
             return cell2
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.mainTableView.deselectRow(at: indexPath, animated: true)
-        
-        var noticias = self.arrayNoticias[indexPath.row]
-        let imagem = self.imagemNoticia
-
-        var autor = ""
-        
-        if noticias.autores != nil {
-            autor = noticias.autores!.first!
-        }
-
-        if indexPath.section == 0 {
-            noticias = self.arrayNoticias.first!
-
-        } else {
-        
-        }
 
         let DetailsVC: DetailsViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
-        DetailsVC.image = imagem
-        DetailsVC.titulo = noticias.titulo
-        DetailsVC.subTitulo = noticias.subTitulo
-        DetailsVC.autor = autor
-        DetailsVC.dataHora = noticias.publicadoEm
-        DetailsVC.texto = noticias.texto
-        DetailsVC.tituloView = noticias.secao?.nome
+
+        if indexPath.section == 0 {
+            DetailsVC.details = self.arrayNoticias[indexPath.row]
+        } else {
+            DetailsVC.details = self.arrayNoticias[indexPath.row + 1]
+        }
         self.navigationController?.pushViewController(DetailsVC, animated: true)
     }
 

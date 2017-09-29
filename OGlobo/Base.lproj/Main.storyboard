@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9kY-0q-8MS" id="htl-RU-rUF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-rL-3Bp">
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="253" width="375" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zPN-zZ-Fpd" id="oZn-74-opI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Hf-al7">
@@ -203,16 +203,16 @@
                                         <fontDescription key="fontDescription" name="WalbaumOriginalSmc-Regular" family="WalbaumOriginalSmc" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eQy-5D-gkm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQy-5D-gkm">
                                         <rect key="frame" x="8" y="169" width="359" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="arW-mK-QP4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="WalbaumDisplay-Bold" family="WalbaumDisplay" pointSize="12"/>
-                                        <color key="textColor" red="0.44309252500534058" green="0.44316959381103516" blue="0.44307607412338257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.44309252500000001" green="0.44316959379999998" blue="0.44307607409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data/hora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U1y-kT-gOD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data/hora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1y-kT-gOD">
                                         <rect key="frame" x="8" y="201" width="359" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="8cl-Nd-x7j"/>
@@ -270,12 +270,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imagemNoticia" destination="KQQ-DS-URo" id="JOB-fD-pUn"/>
+                        <outlet property="imageViewNoticia" destination="KQQ-DS-URo" id="7YW-AO-f9w"/>
                         <outlet property="labelAutor" destination="eQy-5D-gkm" id="77o-0y-R36"/>
                         <outlet property="labelDataHoraPublicacao" destination="U1y-kT-gOD" id="0C5-PU-fgn"/>
                         <outlet property="labelSubTituloNoticia" destination="lCv-70-gzk" id="uMO-e1-0We"/>
                         <outlet property="labelTituloNoticia" destination="3DB-fY-hgV" id="Kor-fZ-K8E"/>
-                        <outlet property="textoNoticia" destination="HcC-cj-QnO" id="EQv-hp-e2I"/>
+                        <outlet property="textViewNoticia" destination="HcC-cj-QnO" id="VvU-Ux-VDS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImL-8L-VAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
