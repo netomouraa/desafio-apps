@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import AlamofireObjectMapper
+import ObjectMapper
+
+class Secao: Mappable {
+    
+    var nome: String?
+    var url: String?
+
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        nome <- map["nome"]
+        url <- map["url"]
+    }
+    
+}
