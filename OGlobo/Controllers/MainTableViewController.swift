@@ -13,6 +13,7 @@ import AlamofireImage
 class MainTableViewController: UITableViewController {
     
     
+    @IBOutlet weak var imageHeader: UIImageView!
     var arrayNoticias = [Conteudos]()
     var imagemNoticia = [UIImage]()
     var urlImagem = [String]()
@@ -42,23 +43,26 @@ class MainTableViewController: UITableViewController {
                     
                     for itens in data{
                         for noticia in itens.conteudos!{
-
-                            self.arrayNoticias.append(noticia)
                             
                             print("NOTICIA: \(noticia.titulo)")
 
-                            for item in noticia.imagens!{
-                                DispatchQueue.main.async() {
-                                    print("FOTO: \(item.url!)\n")
-//                                        self.urlImagem.append(item.url!)
-                                        print("url: \(self.urlImagem.count)")
+                            if noticia.tipo != "linkExterno" {
+                                self.arrayNoticias.append(noticia)
+
+                                for item in noticia.imagens!{
+                                    DispatchQueue.main.async() {
+                                        print("FOTO: \(item.url!)\n")
+                                        //                                        self.urlImagem.append(item.url!)
+                                        //                                        print("url: \(self.urlImagem.count)")
                                         self.requestImagem(url: item.url!)
-
+                                    }
                                 }
-                            }
+                            } 
+//                                else {
+//                                print("FOTOVAZIA")
+//                                self.imagemNoticia.append(UIImage(named: "default.png")!)
+//                            }
                         }
-                        
-
                     }
                     
                     self.tableView.reloadData()
@@ -93,7 +97,7 @@ class MainTableViewController: UITableViewController {
 
             case .failure(let error):
 
-                self.imagemNoticia.append(UIImage(named: "default.png")!)
+                print(error)
 
             }
         }
@@ -105,25 +109,43 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrayNoticias.count
+        return self.arrayNoticias.count - 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
         
-        let noticias = self.arrayNoticias[indexPath.row]
         
-        if self.imagemNoticia.count != 0 {
-        let image = self.imagemNoticia[indexPath.row]
-            cell.imageViewNoticia.image = image
-
+        print(self.imagemNoticia)
+        
+        for (index, element) in self.arrayNoticias.enumerated() {
+            
+            if index == 0 {
+                
+                if self.imagemNoticia.count != 0 {
+                    let image = self.imagemNoticia[0]
+                    self.imageHeader.image = image
+                }
+                
+            } else {
+                
+                let noticias = self.arrayNoticias[indexPath.row]
+                
+                if self.imagemNoticia.count != 0 {
+                    let image = self.imagemNoticia[indexPath.row]
+                    cell.imageViewNoticia.image = image
+                    
+                }
+                
+                print("titulos: \(self.arrayNoticias.count)")
+                print("IMAGEM: \(self.imagemNoticia.count)")
+                
+                
+                cell.labelNomeSecao.text = noticias.secao?.nome
+                cell.labelTituloNoticia.text = noticias.titulo
+                
+            }
         }
-        print("titulos: \(self.arrayNoticias.count)")
-        print("IMAGEM: \(self.imagemNoticia.count)")
-
-
-        cell.labelNomeSecao.text = noticias.secao?.nome
-        cell.labelTituloNoticia.text = noticias.titulo
         
         return cell
     }
@@ -133,13 +155,18 @@ class MainTableViewController: UITableViewController {
         
         let noticias = self.arrayNoticias[indexPath.row]
         let image = self.imagemNoticia[indexPath.row]
-
+        var autor = ""
+        
+        if noticias.autores != nil {
+            autor = noticias.autores!.first!
+        }
+        
         let DetailsVC: DetailsViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
         
         DetailsVC.image = image
         DetailsVC.titulo = noticias.titulo
         DetailsVC.subTitulo = noticias.subTitulo
-        DetailsVC.autor = "POR \(noticias.autores!.first)"
+        DetailsVC.autor = "POR \(autor)"
         DetailsVC.dataHora = noticias.publicadoEm
         DetailsVC.texto = noticias.texto
         DetailsVC.tituloView = noticias.secao?.nome
