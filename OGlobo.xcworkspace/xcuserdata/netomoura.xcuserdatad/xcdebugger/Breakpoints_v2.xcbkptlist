@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528362285.848321"
+            timestampString = "528367706.813888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "requestAlamofire()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528362285.848321"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "requestImagem(url:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

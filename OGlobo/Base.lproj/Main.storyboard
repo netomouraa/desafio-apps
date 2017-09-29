@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9kY-0q-8MS" id="htl-RU-rUF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-rL-3Bp">
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="253" width="375" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zPN-zZ-Fpd" id="oZn-74-opI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-Hf-al7">
@@ -146,8 +146,18 @@
                                     <outlet property="delegate" destination="zzy-Ti-Kok" id="Vck-bh-GbC"/>
                                 </connections>
                             </tableView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-xy-xTV" customClass="UIActivityIndicatorView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hmK-xy-xTV" firstAttribute="leading" secondItem="4OE-dg-lqG" secondAttribute="leading" id="VvY-AO-UYz"/>
+                            <constraint firstItem="hmK-xy-xTV" firstAttribute="top" secondItem="mg1-kN-CO0" secondAttribute="bottom" id="XHW-lu-uaz"/>
+                            <constraint firstItem="6IU-5K-2Xs" firstAttribute="top" secondItem="hmK-xy-xTV" secondAttribute="bottom" id="hzf-xs-hbx"/>
+                            <constraint firstAttribute="trailing" secondItem="hmK-xy-xTV" secondAttribute="trailing" id="nBd-Un-1JI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="O GLOBO" id="SCB-tM-jqs">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Tcy-UK-GZD">
@@ -155,6 +165,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="hmK-xy-xTV" id="Wgk-4z-Fxq"/>
                         <outlet property="mainTableView" destination="XjA-oI-e6W" id="S6D-aG-ZZA"/>
                     </connections>
                 </viewController>
