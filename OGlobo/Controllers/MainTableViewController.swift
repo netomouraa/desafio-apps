@@ -10,13 +10,13 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet weak var imageHeader: UIImageView!
+    @IBOutlet weak var mainTableView: UITableView!
+
     var arrayNoticias = [Conteudos]()
-    var imagemNoticia = [UIImage]()
-    var urlImagem = [String]()
+    var imagemNoticia: UIImage?
+//    var urlImagem = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,24 +48,31 @@ class MainTableViewController: UITableViewController {
 
                             if noticia.tipo != "linkExterno" {
                                 self.arrayNoticias.append(noticia)
+                            }
+                        }
+                    }
+                    
+                    DispatchQueue.main.async() {
+                        self.mainTableView.reloadData()
+                    }
 
-                                for item in noticia.imagens!{
-                                    DispatchQueue.main.async() {
-                                        print("FOTO: \(item.url!)\n")
-                                        //                                        self.urlImagem.append(item.url!)
-                                        //                                        print("url: \(self.urlImagem.count)")
-                                        self.requestImagem(url: item.url!)
-                                    }
-                                }
-                            } 
+//                                for item in noticia.imagens!{
+                            
+                                    
+                                    
+//                                    DispatchQueue.main.async() {
+//                                        print("FOTO: \(item.url!)\n")
+//                                        //                                        self.urlImagem.append(item.url!)
+//                                        //                                        print("url: \(self.urlImagem.count)")
+//                                        self.requestImagem(url: item.url!)
+//                                    }
+//                                }
+//                            }
 //                                else {
 //                                print("FOTOVAZIA")
 //                                self.imagemNoticia.append(UIImage(named: "default.png")!)
 //                            }
-                        }
-                    }
                     
-                    self.tableView.reloadData()
 
 //                    self.activityIndicator.stopAnimating()
 //                    UIApplication.shared.endIgnoringInteractionEvents()
@@ -86,14 +93,14 @@ class MainTableViewController: UITableViewController {
             switch response.result {
             case .success(let data):
 
-            debugPrint(response)
-            
-            print(response.request)
-            print(response.response)
-            debugPrint(response.result)
+//            debugPrint(response)
+//            
+//            print(response.request)
+//            print(response.response)
+//            debugPrint(response.result)
             
                 print("image downloaded: \(data)")
-                self.imagemNoticia.append(data)
+                self.imagemNoticia = data
 
             case .failure(let error):
 
@@ -103,59 +110,73 @@ class MainTableViewController: UITableViewController {
         }
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if indexPath.section == 0 {
+            return 230
+        } else {
+            return 115
+        }
+    }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrayNoticias.count - 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.arrayNoticias.count != 0 {
+            if section == 0 {
+                return 1
+            } else {
+                return self.arrayNoticias.count - 1
+            }
+        } else {
+            return 0
+        }
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        print(self.imagemNoticia)
-        
-        for (index, element) in self.arrayNoticias.enumerated() {
+        if indexPath.section == 0 {
+
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "mainCell1", for: indexPath) as! MainTableViewCell1
             
-            if index == 0 {
-                
-                if self.imagemNoticia.count != 0 {
-                    let image = self.imagemNoticia[0]
-                    self.imageHeader.image = image
-                }
-                
-            } else {
-                
-                let noticias = self.arrayNoticias[indexPath.row]
-                
-                if self.imagemNoticia.count != 0 {
-                    let image = self.imagemNoticia[indexPath.row]
-                    cell.imageViewNoticia.image = image
-                    
-                }
-                
-                print("titulos: \(self.arrayNoticias.count)")
-                print("IMAGEM: \(self.imagemNoticia.count)")
-                
-                
-                cell.labelNomeSecao.text = noticias.secao?.nome
-                cell.labelTituloNoticia.text = noticias.titulo
-                
+            var noticias = self.arrayNoticias.first!
+
+            for item in noticias.imagens! {
+                requestImagem(url: item.url!)
             }
+            
+            cell1.imageViewNoticia1.image = self.imagemNoticia
+            cell1.labelNomeSecao1.text = noticias.secao?.nome?.uppercased()
+            cell1.labelTituloNoticia1.text = noticias.titulo
+
+            return cell1
+        } else {
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "mainCell2", for: indexPath) as! MainTableViewCell2
+            
+            var noticias = self.arrayNoticias[indexPath.row + 1]
+    
+            for item in noticias.imagens! {
+                requestImagem(url: item.url!)
+            }
+
+            cell2.imageViewNoticia2.image = self.imagemNoticia
+            cell2.labelNomeSecao2.text = noticias.secao?.nome?.uppercased()
+            cell2.labelTituloNoticia2.text = noticias.titulo
+            
+            return cell2
         }
         
-        return cell
+//        return UITableViewCell()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.mainTableView.deselectRow(at: indexPath, animated: true)
         
         let noticias = self.arrayNoticias[indexPath.row]
-        let image = self.imagemNoticia[indexPath.row]
         var autor = ""
+        
         
         if noticias.autores != nil {
             autor = noticias.autores!.first!
@@ -163,10 +184,10 @@ class MainTableViewController: UITableViewController {
         
         let DetailsVC: DetailsViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
         
-        DetailsVC.image = image
+        DetailsVC.image = self.imagemNoticia
         DetailsVC.titulo = noticias.titulo
         DetailsVC.subTitulo = noticias.subTitulo
-        DetailsVC.autor = "POR \(autor)"
+        DetailsVC.autor = autor
         DetailsVC.dataHora = noticias.publicadoEm
         DetailsVC.texto = noticias.texto
         DetailsVC.tituloView = noticias.secao?.nome

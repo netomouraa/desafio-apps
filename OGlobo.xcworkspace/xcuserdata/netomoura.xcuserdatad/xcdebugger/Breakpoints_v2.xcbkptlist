@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528346976.245397"
+            timestampString = "528362285.848321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "requestAlamofire()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528346976.245397"
+            timestampString = "528362285.848321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "requestImagem(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,30 +41,76 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528346976.245397"
+            filePath = "OGlobo/Views/MainTableViewCell2.swift"
+            timestampString = "528360777.170439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528346976.245397"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "MainTableViewCell2"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OGlobo.MainTableViewCell2.imageViewNoticia2.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "OGlobo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
+                  timestampString = "528360777.277609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OGlobo.MainTableViewCell2.imageViewNoticia2.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "OGlobo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
+                  timestampString = "528360777.282204"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OGlobo.MainTableViewCell2.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; OGlobo.MainTableViewCell2"
+                  moduleName = "OGlobo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
+                  timestampString = "528360777.285021"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OGlobo.MainTableViewCell2.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;OGlobo.MainTableViewCell2&gt;"
+                  moduleName = "OGlobo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
+                  timestampString = "528360777.289089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

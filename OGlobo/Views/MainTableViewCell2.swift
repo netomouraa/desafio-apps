@@ -1,20 +1,19 @@
 //
-//  MainTableViewCell.swift
+//  MainTableViewCell2.swift
 //  OGlobo
 //
-//  Created by Neto Moura on 26/09/17.
+//  Created by Neto Moura on 29/09/17.
 //  Copyright © 2017 Neto Moura. All rights reserved.
 //
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell {
+class MainTableViewCell2: UITableViewCell {
 
-    @IBOutlet weak var imageViewNoticia: UIImageView!
-    @IBOutlet weak var labelNomeSecao: UILabel!
-    @IBOutlet weak var labelTituloNoticia: UILabel!
-    
-    
+    @IBOutlet weak var imageViewNoticia2: UIImageView!
+    @IBOutlet weak var labelNomeSecao2: UILabel!
+    @IBOutlet weak var labelTituloNoticia2: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

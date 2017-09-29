@@ -22,8 +22,13 @@
 		9793A5971F79F84F002CE0AD /* OGloboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5961F79F84F002CE0AD /* OGloboUITests.swift */; };
 		9793A5A61F79F8A4002CE0AD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */; };
 		9793A5A91F79F8DE002CE0AD /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5A81F79F8DE002CE0AD /* MainTableViewController.swift */; };
-		9793A5AD1F7A0A80002CE0AD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5AC1F7A0A80002CE0AD /* MainTableViewCell.swift */; };
 		9793A5AF1F7A0AB1002CE0AD /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5AE1F7A0AB1002CE0AD /* News.swift */; };
+		97D8AAB31F7E143B0032A735 /* WalbaumDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAAF1F7E143B0032A735 /* WalbaumDisplay-Bold.ttf */; };
+		97D8AAB41F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAB01F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf */; };
+		97D8AAB51F7E143B0032A735 /* WalbaumOriginal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAB11F7E143B0032A735 /* WalbaumOriginal-Bold.ttf */; };
+		97D8AAB61F7E143B0032A735 /* WalbaumOriginalSmc-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAB21F7E143B0032A735 /* WalbaumOriginalSmc-Regular.ttf */; };
+		97D8AAB91F7E1DAE0032A735 /* MainTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D8AAB81F7E1DAE0032A735 /* MainTableViewCell2.swift */; };
+		97D8AABB1F7E1EFC0032A735 /* MainTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D8AABA1F7E1EFC0032A735 /* MainTableViewCell1.swift */; };
 		A3B322BAFFE39C76A153CB5C /* Pods_OGloboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8EA62DDD6760266D9071DA /* Pods_OGloboUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +74,13 @@
 		9793A5981F79F84F002CE0AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9793A5A81F79F8DE002CE0AD /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
-		9793A5AC1F7A0A80002CE0AD /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		9793A5AE1F7A0AB1002CE0AD /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		97D8AAAF1F7E143B0032A735 /* WalbaumDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		97D8AAB01F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumDisplayHeavy-Regular.ttf"; sourceTree = "<group>"; };
+		97D8AAB11F7E143B0032A735 /* WalbaumOriginal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumOriginal-Bold.ttf"; sourceTree = "<group>"; };
+		97D8AAB21F7E143B0032A735 /* WalbaumOriginalSmc-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumOriginalSmc-Regular.ttf"; sourceTree = "<group>"; };
+		97D8AAB81F7E1DAE0032A735 /* MainTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell2.swift; sourceTree = "<group>"; };
+		97D8AABA1F7E1EFC0032A735 /* MainTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell1.swift; sourceTree = "<group>"; };
 		AB55E00EE6AB4B3746FBBD9D /* Pods_OGlobo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OGlobo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAD9E17865834804EFEB5F9 /* Pods-OGloboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OGloboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OGloboTests/Pods-OGloboTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC229CB04FF4A1199CC8A4D8 /* Pods-OGlobo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OGlobo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OGlobo/Pods-OGlobo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +131,7 @@
 		9718B8C61F7B5BF20085A2C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97D8AAB71F7E14410032A735 /* Fonts */,
 				9793A5761F79F84F002CE0AD /* AppDelegate.swift */,
 				9793A57A1F79F84F002CE0AD /* Main.storyboard */,
 				9793A57D1F79F84F002CE0AD /* Assets.xcassets */,
@@ -142,7 +153,8 @@
 		9718B8C81F7B5C570085A2C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9793A5AC1F7A0A80002CE0AD /* MainTableViewCell.swift */,
+				97D8AAB81F7E1DAE0032A735 /* MainTableViewCell2.swift */,
+				97D8AABA1F7E1EFC0032A735 /* MainTableViewCell1.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +229,17 @@
 				9793A5981F79F84F002CE0AD /* Info.plist */,
 			);
 			path = OGloboUITests;
+			sourceTree = "<group>";
+		};
+		97D8AAB71F7E14410032A735 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				97D8AAAF1F7E143B0032A735 /* WalbaumDisplay-Bold.ttf */,
+				97D8AAB01F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf */,
+				97D8AAB11F7E143B0032A735 /* WalbaumOriginal-Bold.ttf */,
+				97D8AAB21F7E143B0032A735 /* WalbaumOriginalSmc-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		D0C133DB0938E1EA30B80A98 /* Frameworks */ = {
@@ -345,6 +368,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D8AAB51F7E143B0032A735 /* WalbaumOriginal-Bold.ttf in Resources */,
+				97D8AAB61F7E143B0032A735 /* WalbaumOriginalSmc-Regular.ttf in Resources */,
+				97D8AAB31F7E143B0032A735 /* WalbaumDisplay-Bold.ttf in Resources */,
+				97D8AAB41F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf in Resources */,
 				9793A5811F79F84F002CE0AD /* LaunchScreen.storyboard in Resources */,
 				9793A57E1F79F84F002CE0AD /* Assets.xcassets in Resources */,
 				9793A57C1F79F84F002CE0AD /* Main.storyboard in Resources */,
@@ -510,16 +537,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D8AAB91F7E1DAE0032A735 /* MainTableViewCell2.swift in Sources */,
 				9718B8D61F7B61D70085A2C3 /* Secao.swift in Sources */,
 				9718B8CD1F7B5EA90085A2C3 /* Routes.swift in Sources */,
 				9718B8D01F7B60820085A2C3 /* Conteudos.swift in Sources */,
 				9718B8D41F7B617B0085A2C3 /* Videos.swift in Sources */,
 				9793A5AF1F7A0AB1002CE0AD /* News.swift in Sources */,
+				97D8AABB1F7E1EFC0032A735 /* MainTableViewCell1.swift in Sources */,
 				9793A5A91F79F8DE002CE0AD /* MainTableViewController.swift in Sources */,
 				9718B8D81F7B628B0085A2C3 /* Imagens.swift in Sources */,
 				9793A5771F79F84F002CE0AD /* AppDelegate.swift in Sources */,
 				9793A5A61F79F8A4002CE0AD /* DetailsViewController.swift in Sources */,
-				9793A5AD1F7A0A80002CE0AD /* MainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
