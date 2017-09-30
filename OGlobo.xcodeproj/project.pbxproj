@@ -21,7 +21,7 @@
 		9793A58C1F79F84F002CE0AD /* OGloboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A58B1F79F84F002CE0AD /* OGloboTests.swift */; };
 		9793A5971F79F84F002CE0AD /* OGloboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5961F79F84F002CE0AD /* OGloboUITests.swift */; };
 		9793A5A61F79F8A4002CE0AD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */; };
-		9793A5A91F79F8DE002CE0AD /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5A81F79F8DE002CE0AD /* MainTableViewController.swift */; };
+		9793A5A91F79F8DE002CE0AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5A81F79F8DE002CE0AD /* MainViewController.swift */; };
 		9793A5AF1F7A0AB1002CE0AD /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9793A5AE1F7A0AB1002CE0AD /* News.swift */; };
 		97D8AAB31F7E143B0032A735 /* WalbaumDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAAF1F7E143B0032A735 /* WalbaumDisplay-Bold.ttf */; };
 		97D8AAB41F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97D8AAB01F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf */; };
@@ -73,7 +73,7 @@
 		9793A5961F79F84F002CE0AD /* OGloboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGloboUITests.swift; sourceTree = "<group>"; };
 		9793A5981F79F84F002CE0AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		9793A5A81F79F8DE002CE0AD /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		9793A5A81F79F8DE002CE0AD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9793A5AE1F7A0AB1002CE0AD /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		97D8AAAF1F7E143B0032A735 /* WalbaumDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		97D8AAB01F7E143B0032A735 /* WalbaumDisplayHeavy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WalbaumDisplayHeavy-Regular.ttf"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		9718B8C71F7B5C050085A2C3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9793A5A81F79F8DE002CE0AD /* MainTableViewController.swift */,
+				9793A5A81F79F8DE002CE0AD /* MainViewController.swift */,
 				9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */,
 			);
 			path = Controllers;
@@ -544,7 +544,7 @@
 				9718B8D41F7B617B0085A2C3 /* Videos.swift in Sources */,
 				9793A5AF1F7A0AB1002CE0AD /* News.swift in Sources */,
 				97D8AABB1F7E1EFC0032A735 /* MainTableViewCell1.swift in Sources */,
-				9793A5A91F79F8DE002CE0AD /* MainTableViewController.swift in Sources */,
+				9793A5A91F79F8DE002CE0AD /* MainViewController.swift in Sources */,
 				9718B8D81F7B628B0085A2C3 /* Imagens.swift in Sources */,
 				9793A5771F79F84F002CE0AD /* AppDelegate.swift in Sources */,
 				9793A5A61F79F8A4002CE0AD /* DetailsViewController.swift in Sources */,
@@ -703,6 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OGlobo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.netomoura.OGlobo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -716,6 +717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OGlobo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.netomoura.OGlobo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,7 +17,6 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var labelDataHoraPublicacao: UILabel!
     @IBOutlet weak var imageViewNoticia: UIImageView!
     @IBOutlet weak var labelDetailsImage: UILabel!
-//    @IBOutlet weak var labelTextNoticia: UILabel!
     @IBOutlet weak var textViewNoticia: UITextView!
 
     var details: Conteudos?
@@ -63,7 +62,7 @@ class DetailsViewController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss-0300"
-        let date = dateFormatter.date(from: (details?.atualizadoEm)!)!
+        let date = dateFormatter.date(from: (details?.publicadoEm)!)!
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         let dateString = dateFormatter.string(from: date)
         

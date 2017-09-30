@@ -24,11 +24,8 @@ enum RouterOGlobo: URLRequestConvertible {
     
     var path: String {
         switch self {
-            
         case .desafioApps:
             return "/Infoglobo/desafio-apps/master/capa.json"
-        default:
-            return ""
         }
     }
     

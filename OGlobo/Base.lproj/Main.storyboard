@@ -24,7 +24,7 @@
         <!--O GLOBO-->
         <scene sceneID="Mkq-EZ-fSR">
             <objects>
-                <viewController title="O GLOBO" id="zzy-Ti-Kok" customClass="MainTableViewController" customModule="OGlobo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" title="O GLOBO" id="zzy-Ti-Kok" customClass="MainViewController" customModule="OGlobo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mg1-kN-CO0"/>
                         <viewControllerLayoutGuide type="bottom" id="6IU-5K-2Xs"/>
@@ -150,7 +150,7 @@
                             </tableView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-xy-xTV" customClass="UIActivityIndicatorView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.14429625870000001" green="0.44187599420000001" blue="0.64511394499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,6 +164,9 @@
                     <navigationItem key="navigationItem" title="O GLOBO" id="SCB-tM-jqs">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Tcy-UK-GZD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="buttonMenuAction:" destination="zzy-Ti-Kok" id="CCm-D2-PqG"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

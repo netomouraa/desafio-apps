@@ -11,9 +11,15 @@ import XCTest
 
 class OGloboTests: XCTestCase {
     
+    var mainViewController: MainViewController!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC") as! MainViewController
+        
+        mainViewController.preload()
+
     }
     
     override func tearDown() {
@@ -31,6 +37,22 @@ class OGloboTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testNumeroDeItensDaTabelaDeveSerIgualAQuantidadeDeDadosDoArray() {
+//        mainViewController.arrayNoticias = [Conteudos]()
+//        mainViewController.mainTableView.reloadData()
+//        
+//        XCTAssertEqual(mainViewController.mainTableView?.numberOfRows(inSection: 0), 1, "Numero de rows na tabela deve ser igual a 1")
+    }
+    
+}
+
+
+extension UIViewController {
+    
+    func preload() {
+        _ = self.view
     }
     
 }

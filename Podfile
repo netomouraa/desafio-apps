@@ -7,7 +7,6 @@ target 'OGlobo' do
 
 #    pod 'Alamofire', '~> 4.5'
     pod 'AlamofireObjectMapper', '~> 4.0'
-    
     pod 'AlamofireImage', '~> 3.3'
   
   # Pods for OGlobo

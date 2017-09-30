@@ -10,11 +10,12 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class MainTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainTableView: UITableView!
 
+    var arrayTest = [String]()
     var arrayNoticias = [Conteudos]()
     var imagemNoticia: UIImage?
     var cache = NSCache<AnyObject, AnyObject>()
@@ -24,9 +25,14 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
 
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
         view.addSubview(activityIndicator)
 
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
+        imageView.image = UIImage(named: "oglobo.png")
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
 
         requestAlamofire()
@@ -47,8 +53,6 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
                     for itens in data{
                         for noticia in itens.conteudos!{
                             self.arrayNoticias.append(noticia)
-//                            if noticia.tipo != "linkExterno" {
-//                            }
                         }
                     }
                 self.mainTableView.reloadData()
@@ -64,6 +68,9 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    @IBAction func buttonMenuAction(_ sender: Any) {
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
