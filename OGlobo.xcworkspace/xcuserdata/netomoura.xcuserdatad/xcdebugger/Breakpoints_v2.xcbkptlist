@@ -9,122 +9,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528407297.317966"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "requestAlamofire()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OGlobo/Views/MainTableViewCell2.swift"
-            timestampString = "528360777.170439"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "MainTableViewCell2"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.MainTableViewCell2.imageViewNoticia2.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
-                  timestampString = "528360777.277609"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.MainTableViewCell2.imageViewNoticia2.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
-                  timestampString = "528360777.282204"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.MainTableViewCell2.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; OGlobo.MainTableViewCell2"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
-                  timestampString = "528360777.285021"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "70">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.MainTableViewCell2.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;OGlobo.MainTableViewCell2&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Views/MainTableViewCell2.swift"
-                  timestampString = "528360777.289089"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/MainTableViewController.swift"
-            timestampString = "528408376.074501"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "OGlobo/Controllers/DetailsViewController.swift"
-            timestampString = "528408376.074501"
+            timestampString = "528442084.179955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,76 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OGlobo/Controllers/DetailsViewController.swift"
-            timestampString = "528408376.074501"
+            filePath = "OGlobo/Controllers/MainTableViewController.swift"
+            timestampString = "528438944.898129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "DetailsViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.DetailsViewController.textoNoticia.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Controllers/DetailsViewController.swift"
-                  timestampString = "528408226.261827"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.DetailsViewController.textoNoticia.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Controllers/DetailsViewController.swift"
-                  timestampString = "528408226.265173"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.DetailsViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; OGlobo.DetailsViewController"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Controllers/DetailsViewController.swift"
-                  timestampString = "528408226.268183"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "410">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "OGlobo.DetailsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;OGlobo.DetailsViewController&gt;"
-                  moduleName = "OGlobo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/netomoura/Workspace/OGlobo/OGlobo/Controllers/DetailsViewController.swift"
-                  timestampString = "528408226.270897"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "306">
-               </Location>
-            </Locations>
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -214,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OGlobo/Controllers/DetailsViewController.swift"
-            timestampString = "528409696.092693"
+            timestampString = "528442084.179955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

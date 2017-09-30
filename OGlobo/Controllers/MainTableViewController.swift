@@ -46,9 +46,9 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 case .success(let data):
                     for itens in data{
                         for noticia in itens.conteudos!{
-                            if noticia.tipo != "linkExterno" {
-                                self.arrayNoticias.append(noticia)
-                            }
+                            self.arrayNoticias.append(noticia)
+//                            if noticia.tipo != "linkExterno" {
+//                            }
                         }
                     }
                 self.mainTableView.reloadData()
@@ -95,17 +95,21 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if indexPath.section == 0 {
             let noticias = self.arrayNoticias[indexPath.row]
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "mainCell1", for: indexPath) as! MainTableViewCell1
-            for item in noticias.imagens! {
-                if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
-                    cell1.imageViewNoticia1.image = image as? UIImage
-                }else {
-                    self.imagemNoticia = nil
-                    Alamofire.request(item.url!).responseImage { response in
-                        if let image = response.result.value {
-                            cell1.imageViewNoticia1.image = image
-                            self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
-                        }else{
-                            print(response.description)
+            if (noticias.imagens?.isEmpty)! {
+                cell1.imageViewNoticia1.image = UIImage(named: "default.png")
+             } else {
+                for item in noticias.imagens! {
+                    if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
+                        cell1.imageViewNoticia1.image = image as? UIImage
+                    }else {
+                        self.imagemNoticia = nil
+                        Alamofire.request(item.url!).responseImage { response in
+                            if let image = response.result.value {
+                                cell1.imageViewNoticia1.image = image
+                                self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
+                            }else{
+                                print(response.description)
+                            }
                         }
                     }
                 }
@@ -117,20 +121,26 @@ class MainTableViewController: UIViewController, UITableViewDelegate, UITableVie
         } else {
             let noticias = self.arrayNoticias[indexPath.row + 1]
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "mainCell2", for: indexPath) as! MainTableViewCell2
-            for item in noticias.imagens! {
-                if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
-                    cell2.imageViewNoticia2.image = image as? UIImage
-                }else {
-                    cell2.imageViewNoticia2.image = nil
-                    Alamofire.request(item.url!).responseImage { response in
-                        if let image = response.result.value {
-                            cell2.imageViewNoticia2.image = image
-                            self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
-                        }else{
-                            print(response.description)
+            if (noticias.imagens?.isEmpty)! {
+                cell2.imageViewNoticia2.image = UIImage(named: "default.png")
+            } else {
+                
+                for item in noticias.imagens! {
+                    if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
+                        cell2.imageViewNoticia2.image = image as? UIImage
+                    }else {
+                        cell2.imageViewNoticia2.image = nil
+                        Alamofire.request(item.url!).responseImage { response in
+                            if let image = response.result.value {
+                                cell2.imageViewNoticia2.image = image
+                                self.cache.setObject(image, forKey: noticias.imagens?[0] as AnyObject)
+                            }else{
+                                print(response.description)
+                            }
                         }
                     }
                 }
+
             }
             cell2.labelNomeSecao2.text = noticias.secao?.nome?.uppercased()
             cell2.labelTituloNoticia2.text = noticias.titulo
