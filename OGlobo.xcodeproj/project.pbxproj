@@ -132,22 +132,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9718B8C71F7B5C050085A2C3 /* Controllers */ = {
+		9718B8C71F7B5C050085A2C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9793A5A81F79F8DE002CE0AD /* MainViewController.swift */,
 				9793A5A41F79F8A4002CE0AD /* DetailsViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		9718B8C81F7B5C570085A2C3 /* Views */ = {
+		9718B8C81F7B5C570085A2C3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				97D8AAB81F7E1DAE0032A735 /* MainTableViewCell2.swift */,
 				97D8AABA1F7E1EFC0032A735 /* MainTableViewCell1.swift */,
 			);
-			path = Views;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9718B8C91F7B5C6C0085A2C3 /* Models */ = {
@@ -195,11 +195,11 @@
 		9793A5751F79F84F002CE0AD /* OGlobo */ = {
 			isa = PBXGroup;
 			children = (
-				9718B8C71F7B5C050085A2C3 /* Controllers */,
+				9718B8C71F7B5C050085A2C3 /* ViewControllers */,
 				9718B8C91F7B5C6C0085A2C3 /* Models */,
 				9718B8CE1F7B5EAC0085A2C3 /* Network */,
 				9718B8C61F7B5BF20085A2C3 /* Supporting Files */,
-				9718B8C81F7B5C570085A2C3 /* Views */,
+				9718B8C81F7B5C570085A2C3 /* Cells */,
 			);
 			path = OGlobo;
 			sourceTree = "<group>";

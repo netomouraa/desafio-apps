@@ -5,8 +5,9 @@
 //  Created by Neto Moura on 25/09/17.
 //  Copyright © 2017 Neto Moura. All rights reserved.
 //
-
 import XCTest
+//import Alamofire
+
 @testable import OGlobo
 
 class OGloboTests: XCTestCase {
@@ -26,9 +27,6 @@ class OGloboTests: XCTestCase {
     override func tearDown() {
         sessionUnderTest = nil
         super.tearDown()
-    }
-    
-    func testExample() {
     }
     
     func testPerformanceExample() {
@@ -73,47 +71,52 @@ class OGloboTests: XCTestCase {
         XCTAssertEqual(statusCode, 200)
     }
     
-    func testParsesData() {
-//        let promise = expectation(description: "Status code: 200")
-        var noticias = [String]()
-        
-        XCTAssertEqual(noticias.count, 0, "numbers of elements in array")
-        let dataTask = sessionUnderTest?.dataTask(with: urlAPI!) {
-            data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let httpResponse = response as? HTTPURLResponse {
-                if httpResponse.statusCode == 200 {
-//                    promise.fulfill()
-                    
-                    do {
-                        if let data = data,
-                            let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-                            let conteudos = json["conteudos"] as? [[String: Any]] {
-                            for item in conteudos {
-                                if let noticia = item["titulo"] as? String {
-                                    noticias.append(noticia)
-                                }
-                            }
-                        }
-                        print(noticias)
-                    } catch {
-                        print("Error deserializing JSON: \(error)")
-                    }
-//                    for item in data!{
-//                        print("ITEM: \(item)")
-//                        for noticia in item.conteudos!{
-//                            self.mainViewController.arrayNoticias.append(noticia)
-//                        }
-//                    }
-                }
-            }
-        }
-        dataTask?.resume()
-//        waitForExpectations(timeout: 5, handler: nil)
+//    func testDadosEstaoSendoApresentadosCorretamente() {
+//        mainViewController.arrayNoticias = [Conteudos]()
+//        mainViewController.mainTableView.reloadData()
 //
-//        XCTAssertEqual(noticias.count, 14, "Numbers of elements in array")
-    }
+//        let indiceCell1 = IndexPath(row: 0, section: 0)
+//        let primeiraCell = mainViewController.mainTableView?.cellForRow(at: indiceCell1) as! MainTableViewCell1
+//
+//        let indiceCell2 = IndexPath(row: 1, section: 1)
+//        let segundaCell = mainViewController.mainTableView?.cellForRow(at: indiceCell2) as! MainTableViewCell2
+//
+//        let indiceCell3 = IndexPath(row: 2, section: 1)
+//        let terceiraCell = mainViewController.mainTableView?.cellForRow(at: indiceCell3) as! MainTableViewCell2
+//
+//        XCTAssertEqual(primeiraCell.labelNomeSecao1.text, "O GLOBO", "Dados corretos na primeira célula")
+//        XCTAssertEqual(segundaCell.labelNomeSecao2.text, "Mariana Sanches", "Dados corretos na segunda célula")
+//        XCTAssertEqual(terceiraCell.labelNomeSecao2.text, "Maria Lima", "Dados corretos na terceira célula")
+//
+//    }
+    
+    
+//    func testAoClicarNaCelulaDeveIrParaTelaDeDetalhes() {
+//        mainViewController.arrayNoticias = [Conteudos]()
+//        mainViewController.mainTableView.reloadData()
+//
+//        mainViewController.mainTableView.delegate?.tableView!(mainViewController.mainTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+//
+//        XCTAssertTrue(self.navigationController.topViewController is DetailsViewController)
+//    }
+    
+    
+//    func testRequest() {
+//        let e = expectation(description: "Alamofire")
+//
+//        Alamofire.request(urlAPI!)
+//            .response { response in
+//                XCTAssertNil(response.error, "Whoops, error \(response.error!.localizedDescription)")
+//
+//                XCTAssertNotNil(response, "No response")
+//                XCTAssertEqual(response.response?.statusCode ?? 0, 200, "Status code not 200")
+//
+//                e.fulfill()
+//        }
+//
+//        waitForExpectations(timeout: 5.0, handler: nil)
+//    }
+
 }
 
 extension UIViewController {

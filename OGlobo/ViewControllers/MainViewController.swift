@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var arrayNoticias = [Conteudos]()
     var imagemNoticia: UIImage?
     var cache = NSCache<AnyObject, AnyObject>()
-    var arrayTest = [String]()
+//    var arrayTest = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
