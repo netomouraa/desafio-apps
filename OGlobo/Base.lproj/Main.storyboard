@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cub-xI-8ij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cub-xI-8ij">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="WalbaumDisplay-Bold.ttf">
-            <string>WalbaumDisplay-Bold</string>
-        </array>
-        <array key="WalbaumDisplayHeavy-Regular.ttf">
-            <string>WalbaumDisplayHeavy-Regular</string>
-        </array>
-        <array key="WalbaumOriginalSmc-Regular.ttf">
-            <string>WalbaumOriginalSmc-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--O GLOBO-->
         <scene sceneID="Mkq-EZ-fSR">
@@ -30,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="6IU-5K-2Xs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4OE-dg-lqG">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XjA-oI-e6W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -57,7 +46,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="pe1-GJ-awz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="WalbaumDisplayHeavy-Regular" family="WalbaumDisplayHeavy" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -70,7 +59,7 @@
                                                         <constraint firstAttribute="height" constant="23" id="cCn-20-iYJ"/>
                                                         <constraint firstAttribute="width" constant="70" id="jtn-to-3Yt"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="WalbaumDisplay-Bold" family="WalbaumDisplay" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -105,13 +94,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="m6B-oU-t3f"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="WalbaumDisplay-Bold" family="WalbaumDisplay" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" red="0.57983112339999998" green="0.64531731609999998" blue="0.68290966750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z05-WS-cto">
                                                     <rect key="frame" x="167" y="39" width="200" height="41"/>
-                                                    <fontDescription key="fontDescription" name="WalbaumDisplayHeavy-Regular" family="WalbaumDisplayHeavy" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" red="0.097590334710000004" green="0.18729177120000001" blue="0.27049130199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -149,7 +138,7 @@
                                 </connections>
                             </tableView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-xy-xTV" customClass="UIActivityIndicatorView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
                                 <color key="backgroundColor" red="0.14429625870000001" green="0.44187599420000001" blue="0.64511394499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -193,30 +182,30 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IH0-n9-IVR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-fY-hgV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3DB-fY-hgV">
                                         <rect key="frame" x="8" y="8" width="359" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="Ay5-fg-Qf6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="WalbaumDisplayHeavy-Regular" family="WalbaumDisplayHeavy" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" red="0.095912881195545197" green="0.20048221945762634" blue="0.30130153894424438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-70-gzk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitulo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-70-gzk">
                                         <rect key="frame" x="8" y="82" width="359" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="9BA-ad-vJX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="WalbaumDisplay-Bold" family="WalbaumDisplay" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <color key="textColor" red="0.095912881199999994" green="0.2004822195" blue="0.3013015389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQy-5D-gkm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eQy-5D-gkm">
                                         <rect key="frame" x="8" y="136" width="359" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="arW-mK-QP4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="WalbaumDisplay-Bold" family="WalbaumDisplay" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.44309252500000001" green="0.44316959379999998" blue="0.44307607409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -225,18 +214,18 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="8cl-Nd-x7j"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="WalbaumOriginalSmc-Regular" family="WalbaumOriginalSmc" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <color key="textColor" red="0.44309252500000001" green="0.44316959379999998" blue="0.44307607409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQQ-DS-URo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQQ-DS-URo">
                                         <rect key="frame" x="8" y="195" width="359" height="220"/>
                                         <color key="backgroundColor" red="0.94500821830000004" green="0.94516295189999999" blue="0.94497519730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="MDu-UE-cay"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-YK-RXw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-YK-RXw">
                                         <rect key="frame" x="18" y="377" width="339" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="rzB-hG-5k0"/>
@@ -246,24 +235,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaL-F6-El2">
-                                        <rect key="frame" x="8" y="423" width="359" height="36"/>
+                                        <rect key="frame" x="8" y="423" width="359" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="WalbaumDisplayHeavy-Regular" family="WalbaumDisplayHeavy" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="U1y-kT-gOD" firstAttribute="top" secondItem="eQy-5D-gkm" secondAttribute="bottom" constant="8" symbolic="YES" id="0vf-DS-ZUi"/>
+                                    <constraint firstAttribute="trailing" secondItem="TaL-F6-El2" secondAttribute="trailing" constant="8" id="3eq-te-4pP"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="centerX" secondItem="IH0-n9-IVR" secondAttribute="centerX" id="4wd-1c-AQb"/>
                                     <constraint firstItem="Ias-YK-RXw" firstAttribute="leading" secondItem="IH0-n9-IVR" secondAttribute="leading" constant="18" id="6Md-w6-All"/>
                                     <constraint firstItem="lCv-70-gzk" firstAttribute="top" secondItem="3DB-fY-hgV" secondAttribute="bottom" constant="8" symbolic="YES" id="8H1-PG-SPC"/>
-                                    <constraint firstItem="TaL-F6-El2" firstAttribute="top" secondItem="Ias-YK-RXw" secondAttribute="bottom" constant="17" id="8Kg-iJ-tYp"/>
+                                    <constraint firstAttribute="bottom" secondItem="TaL-F6-El2" secondAttribute="bottom" constant="8" id="8ds-D2-334"/>
                                     <constraint firstItem="eQy-5D-gkm" firstAttribute="leading" secondItem="U1y-kT-gOD" secondAttribute="leading" id="8iu-Td-VwI"/>
+                                    <constraint firstItem="TaL-F6-El2" firstAttribute="leading" secondItem="IH0-n9-IVR" secondAttribute="leading" constant="8" id="FaM-Oq-Btm"/>
                                     <constraint firstItem="lCv-70-gzk" firstAttribute="leading" secondItem="eQy-5D-gkm" secondAttribute="leading" id="Fd8-pX-Ajw"/>
                                     <constraint firstItem="U1y-kT-gOD" firstAttribute="leading" secondItem="KQQ-DS-URo" secondAttribute="leading" id="S80-bC-kt0"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="leading" secondItem="IH0-n9-IVR" secondAttribute="leadingMargin" id="VXQ-pA-jWy"/>
-                                    <constraint firstItem="TaL-F6-El2" firstAttribute="leading" secondItem="IH0-n9-IVR" secondAttribute="leading" constant="8" id="ZKg-Hd-lvh"/>
+                                    <constraint firstItem="TaL-F6-El2" firstAttribute="top" secondItem="KQQ-DS-URo" secondAttribute="bottom" constant="8" id="ZRC-TL-c62"/>
                                     <constraint firstItem="Ias-YK-RXw" firstAttribute="leading" secondItem="KQQ-DS-URo" secondAttribute="trailing" constant="-349" id="aap-hU-ve0"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="top" secondItem="IH0-n9-IVR" secondAttribute="topMargin" id="atD-oo-RoU"/>
                                     <constraint firstItem="Ias-YK-RXw" firstAttribute="top" secondItem="KQQ-DS-URo" secondAttribute="bottom" constant="-38" id="bO7-oI-Azd"/>
@@ -273,9 +263,6 @@
                                     <constraint firstItem="lCv-70-gzk" firstAttribute="trailing" secondItem="eQy-5D-gkm" secondAttribute="trailing" id="evG-cE-zmU"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="leading" secondItem="lCv-70-gzk" secondAttribute="leading" id="fnh-qG-L94"/>
                                     <constraint firstItem="U1y-kT-gOD" firstAttribute="trailing" secondItem="KQQ-DS-URo" secondAttribute="trailing" id="gyN-mF-LEp"/>
-                                    <constraint firstAttribute="bottom" secondItem="TaL-F6-El2" secondAttribute="bottom" constant="180" id="k4y-Jr-OJL"/>
-                                    <constraint firstItem="TaL-F6-El2" firstAttribute="top" secondItem="KQQ-DS-URo" secondAttribute="bottom" constant="8" id="lNB-fg-FU1"/>
-                                    <constraint firstAttribute="trailing" secondItem="TaL-F6-El2" secondAttribute="trailing" constant="8" id="sL7-47-dNK"/>
                                     <constraint firstAttribute="trailing" secondItem="Ias-YK-RXw" secondAttribute="trailing" constant="18" id="tam-0X-VYE"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="trailing" secondItem="IH0-n9-IVR" secondAttribute="trailingMargin" id="yYt-BA-OuG"/>
                                     <constraint firstItem="3DB-fY-hgV" firstAttribute="trailing" secondItem="lCv-70-gzk" secondAttribute="trailing" id="ybG-yB-lYO"/>
@@ -311,7 +298,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cub-xI-8ij" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ZM3-GL-xkv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.14429625870000001" green="0.44187599420000001" blue="0.64511394499999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

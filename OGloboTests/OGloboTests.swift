@@ -12,14 +12,16 @@ import XCTest
 class OGloboTests: XCTestCase {
     
     var mainViewController: MainViewController!
+    var mainsTableViewCell1: MainTableViewCell1!
+    var Conteudo: Conteudos!
     
     override func setUp() {
         super.setUp()
         
         mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC") as! MainViewController
-        
         mainViewController.preload()
 
+        
     }
     
     override func tearDown() {
@@ -40,10 +42,16 @@ class OGloboTests: XCTestCase {
     }
     
     func testNumeroDeItensDaTabelaDeveSerIgualAQuantidadeDeDadosDoArray() {
-//        mainViewController.arrayNoticias = [Conteudos]()
-//        mainViewController.mainTableView.reloadData()
-//        
-//        XCTAssertEqual(mainViewController.mainTableView?.numberOfRows(inSection: 0), 1, "Numero de rows na tabela deve ser igual a 1")
+//        mainViewController.arrayNoticias = [Conteudos(titulo:"Maria", subTitulo:"da Silva")]
+        mainViewController.arrayNoticias = [Conteudos]()
+        mainViewController.mainTableView.reloadData()
+        
+//        XCTAssertEqual(mainsTableViewCell1.labelTituloNoticia1.text!, "Pessoas carregadas")
+
+//        let indiceCell1 = IndexPath(forRow: 0, inSection: 0)
+//        let primeiraCell = mainViewController.mainTableView?.cellForRow(at: indiceCell1 as IndexPath) as! MainTableViewCell1
+//
+//        XCTAssertEqual(primeiraCell.labelTituloNoticia1.text, "Sr(a) Maria - 20 anos", "Dados incorretos na primeira célula")
     }
     
 }

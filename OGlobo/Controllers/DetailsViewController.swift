@@ -48,6 +48,7 @@ class DetailsViewController: UIViewController {
             self.labelDetailsImage.text = "\(item.legenda!). Foto: \(item.fonte!)"
             }
         }
+        
         var autor: String?
         if details?.tipo == "linkExterno" || (details?.autores?.isEmpty)! {
             autor = "AUTOR DESCONHECIDO"
@@ -81,7 +82,8 @@ class DetailsViewController: UIViewController {
     }
     
     func rightButtonAction(sender: UIBarButtonItem){
-        let activityController = UIActivityViewController(activityItems: [], applicationActivities: [])
+        let url = URL(string: (details?.urlOriginal)!)
+        let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: [])
         activityController.popoverPresentationController?.sourceView = self.view
         activityController.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         present(activityController, animated: true)

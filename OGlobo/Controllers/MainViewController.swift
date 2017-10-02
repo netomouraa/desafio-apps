@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SafariServices
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -61,9 +62,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 UIApplication.shared.endIgnoringInteractionEvents()
                 
                 case .failure(let error):
-                    print("ERRO! \(error)")
                     self.activityIndicator.stopAnimating()
                     UIApplication.shared.endIgnoringInteractionEvents()
+                    
+                    let alert = UIAlertController(title: "Você parece estar desconectado.", message: "Verifique sua conexão com a internet.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { (action) in
+                        self.requestAlamofire()
+                    }))
+                    alert.popoverPresentationController?.sourceView = self.view
+                    alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    print("ERRO! \(error)")
+
                 }
         }
     }
@@ -99,11 +110,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let imageDefault = UIImage(named: "default.png")
+        
         if indexPath.section == 0 {
             let noticias = self.arrayNoticias[indexPath.row]
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "mainCell1", for: indexPath) as! MainTableViewCell1
+            
             if (noticias.imagens?.isEmpty)! {
-                cell1.imageViewNoticia1.image = UIImage(named: "default.png")
+                cell1.imageViewNoticia1.image = imageDefault
              } else {
                 for item in noticias.imagens! {
                     if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
@@ -128,10 +142,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             let noticias = self.arrayNoticias[indexPath.row + 1]
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "mainCell2", for: indexPath) as! MainTableViewCell2
+            
             if (noticias.imagens?.isEmpty)! {
-                cell2.imageViewNoticia2.image = UIImage(named: "default.png")
+                cell2.imageViewNoticia2.image = imageDefault
             } else {
-                
                 for item in noticias.imagens! {
                     if let image = cache.object(forKey: noticias.imagens?[0] as AnyObject) {
                         cell2.imageViewNoticia2.image = image as? UIImage
@@ -162,10 +176,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         if indexPath.section == 0 {
             DetailsVC.details = self.arrayNoticias[indexPath.row]
+            self.navigationController?.pushViewController(DetailsVC, animated: true)
         } else {
-            DetailsVC.details = self.arrayNoticias[indexPath.row + 1]
+            let link = self.arrayNoticias[indexPath.row + 1]
+            if  link.tipo == "linkExterno" {
+                let SafariVC = SFSafariViewController(url: URL(string: link.urlOriginal!)!)
+                self.present(SafariVC, animated: true, completion: nil)
+            } else {
+                DetailsVC.details = self.arrayNoticias[indexPath.row + 1]
+                self.navigationController?.pushViewController(DetailsVC, animated: true)
+            }
         }
-        self.navigationController?.pushViewController(DetailsVC, animated: true)
     }
 
 }
