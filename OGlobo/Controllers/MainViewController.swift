@@ -16,10 +16,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mainTableView: UITableView!
 
-    var arrayTest = [String]()
     var arrayNoticias = [Conteudos]()
     var imagemNoticia: UIImage?
     var cache = NSCache<AnyObject, AnyObject>()
+    var arrayTest = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +56,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                             self.arrayNoticias.append(noticia)
                         }
                     }
-                self.mainTableView.reloadData()
-                    
+                 
+                    DispatchQueue.main.async {
+                        self.mainTableView.reloadData()
+                    }
                 self.activityIndicator.stopAnimating()
                 UIApplication.shared.endIgnoringInteractionEvents()
                 
